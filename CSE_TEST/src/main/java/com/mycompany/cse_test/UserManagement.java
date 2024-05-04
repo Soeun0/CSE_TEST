@@ -36,7 +36,7 @@ public class UserManagement {
     String CurrentUserPw;
     String CurrentUserType;
     
-    String[] temp = new String[30];
+
     
      private static final UserManagement instance = new UserManagement();
     
@@ -88,6 +88,8 @@ public class UserManagement {
         
         public void AddUser(){ //사용자정보 등록
            InspectUserList();
+           
+           String[] temp = new String[4];
 
            System.out.println("이름: ");
            temp[0] = tool.getUserInput();
@@ -122,13 +124,41 @@ public class UserManagement {
             Pw.remove(selNum);
             IsManager.remove(selNum);
             
-             Regenerate("UserData");
+            Regenerate("UserData");
             
             InspectUserList();
         }
         
         public void ModifyUser(){ //사용자정보 수정
+           InspectUserList();
+           System.out.println("수정할 사용자의 번호를 입력하세요."); 
            
+           String input = tool.getUserInput();
+            
+           int selNum = Integer.parseInt(input)-1;
+           
+           
+           String[] temp = new String[4];
+
+           System.out.println("이름: ");
+           input = tool.getUserInput();
+           Name.set(selNum, input);
+           
+           System.out.println("아이디: ");
+           input = tool.getUserInput();
+           Id.set(selNum, input);
+           
+           System.out.println("비밀번호: ");
+           input = tool.getUserInput();
+           Pw.set(selNum, input);
+           
+           System.out.println("관리자 여부(true or false): ");
+           input = tool.getUserInput();
+           IsManager.set(selNum, Boolean.valueOf(input));
+          
+           Regenerate("UserData");
+           
+           InspectUserList();
         }
         
         
