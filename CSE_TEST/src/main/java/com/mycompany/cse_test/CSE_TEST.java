@@ -10,8 +10,12 @@ package com.mycompany.cse_test;
  */
 public class CSE_TEST {
 
+    static UserManagement user = UserManagement.getInstance();
+    
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("test");
+         System.out.println("<도서관리>");
+
+        user.AddUser();
+        user.DeleteUser();
     }
 }
