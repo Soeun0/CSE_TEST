@@ -26,7 +26,7 @@
 정서연,seoyeon123,password27,false/
 박주원,juwon123,password28,false/
 임주원,juwon123,password29,false/
-관리자,admin123,pw123,true/
+유승원,db123,pw32,false/
 박준영,qkr123,pw123,false/
 이종민,lee123,pw123,true/
 이동석,lee123,pw123,true/

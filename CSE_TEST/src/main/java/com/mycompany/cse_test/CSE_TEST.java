@@ -15,7 +15,9 @@ public class CSE_TEST {
     public static void main(String[] args) {
          System.out.println("<도서관리>");
 
-        user.AddUser();
-        user.DeleteUser();
+        //user.AddUser();
+        //user.DeleteUser();
+        user.ModifyUser();
+        
     }
 }
