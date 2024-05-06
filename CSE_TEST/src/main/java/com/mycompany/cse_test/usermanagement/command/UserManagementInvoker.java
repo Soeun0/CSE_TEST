@@ -20,6 +20,7 @@ public class UserManagementInvoker {
         commandMap.put("add", new AddUserCommand(UserManagement.getInstance()));
         commandMap.put("delete", new DeleteUserCommand(UserManagement.getInstance()));
         commandMap.put("modify", new ModifyUserCommand(UserManagement.getInstance()));
+        commandMap.put("search", new SearchUserCommand(UserManagement.getInstance()));
     }
 
     public void executeCommand(String commandName) {

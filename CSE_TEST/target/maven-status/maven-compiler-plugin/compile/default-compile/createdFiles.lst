@@ -2,6 +2,7 @@ com\mycompany\cse_test\usermanagement\command\AddUserCommand.class
 com\mycompany\cse_test\usermanagement\command\DeleteUserCommand.class
 com\mycompany\cse_test\CSE_TEST.class
 com\mycompany\cse_test\usermanagement\command\Command.class
+com\mycompany\cse_test\usermanagement\command\SearchUserCommand.class
 com\mycompany\cse_test\IOProcessor.class
 com\mycompany\cse_test\usermanagement\UserManagement.class
 com\mycompany\cse_test\usermanagement\command\ModifyUserCommand.class

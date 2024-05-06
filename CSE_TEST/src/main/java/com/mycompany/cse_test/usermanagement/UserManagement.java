@@ -85,6 +85,131 @@ public class UserManagement {
             
         }
         
+           
+        public void SearchUserList(){ //사용자 검색
+           String str="";
+           ArrayList<Integer> index = new ArrayList<>();
+            System.out.println("검색방식을 입력하세요(name, id, pw, type): ");
+            str = tool.getUserInput();
+            int indexNumber=0;
+            switch(str){
+                case "name":
+                    System.out.println("검색할 이름을 입력하세요: ");
+                    str = tool.getUserInput();
+                    for(int i=0;i<Name.size();i++){
+                        if(str.equals(Name.get(i))){
+                            index.add(i);
+                        }
+                    }
+                    
+                    for(int num:index){
+                         System.out.println(
+                          indexNumber+1
+                            +
+                          "."        
+                            +
+                          String.format("%15s",Name.get(num))
+                            +
+                          String.format("%15s",Id.get(num))
+                            +
+                          String.format("%15s",Pw.get(num))
+                            +
+                          String.format("%15b",IsManager.get(num))
+
+             );
+                         indexNumber++;
+            
+                    }
+                    break;
+                case "id":
+                    System.out.println("검색할 아이디를 입력하세요: ");
+                    str = tool.getUserInput();
+                    for(int i=0;i<Id.size();i++){
+                        if(str.equals(Id.get(i))){
+                            index.add(i);
+                        }
+                    }
+                    
+                    for(int num:index){
+                         System.out.println(
+                          indexNumber+1
+                            +
+                          "."        
+                            +
+                          String.format("%15s",Name.get(num))
+                            +
+                          String.format("%15s",Id.get(num))
+                            +
+                          String.format("%15s",Pw.get(num))
+                            +
+                          String.format("%15b",IsManager.get(num))
+
+             );
+                        indexNumber++;
+            
+                    }
+                    break;
+                case "pw":
+                     System.out.println("검색할 비밀번호를 입력하세요: ");
+                    str = tool.getUserInput();
+                    for(int i=0;i<Pw.size();i++){
+                        if(str.equals(Pw.get(i))){
+                            index.add(i);
+                        }
+                    }
+                    
+                    for(int num:index){
+                         System.out.println(
+                          indexNumber+1
+                            +
+                          "."        
+                            +
+                          String.format("%15s",Name.get(num))
+                            +
+                          String.format("%15s",Id.get(num))
+                            +
+                          String.format("%15s",Pw.get(num))
+                            +
+                          String.format("%15b",IsManager.get(num))
+
+             );
+                        indexNumber++;
+            
+                    }
+                    break;
+                case "type":
+                 System.out.println("관리자 여부를 입력하세요(true, false): ");
+                    str = tool.getUserInput();
+                    for(int i=0;i<IsManager.size();i++){
+                        
+                        if(Boolean.parseBoolean(str) == IsManager.get(i)){
+                            index.add(i);
+                        }
+                    }
+                    
+                    for(int num:index){
+                         System.out.println(
+                          indexNumber+1
+                            +
+                          "."        
+                            +
+                          String.format("%15s",Name.get(num))
+                            +
+                          String.format("%15s",Id.get(num))
+                            +
+                          String.format("%15s",Pw.get(num))
+                            +
+                          String.format("%15b",IsManager.get(num))
+
+             );
+                        indexNumber++;
+            
+                    }
+                    break;
+            }
+            
+        }
+       
     
         
         public void AddUser(){ //사용자정보 등록
