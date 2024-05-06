@@ -17,7 +17,6 @@ import java.util.logging.Logger;
 public class IOProcessor {   //클래스에서 공통적으로 쓰이는 입출력 메서드를 모아둠
     
     private static final IOProcessor instance = new IOProcessor();
-    static ArrayList<String[]> list = new ArrayList<>();
     
         private IOProcessor(){    //외부에서 생성하는 것을 방지
         }
@@ -28,6 +27,9 @@ public class IOProcessor {   //클래스에서 공통적으로 쓰이는 입출�
 
         
             public static ArrayList<String[]> getTextedData(String parameter){    //파일에 저장된 데이터를 리스트에 읽어드림
+                
+                ArrayList<String[]> list = new ArrayList<>();
+                
             try{           
                 File f = new File(parameter);
         if(f.exists()){

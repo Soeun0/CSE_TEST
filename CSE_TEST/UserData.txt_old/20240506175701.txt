@@ -28,5 +28,7 @@
 임주원,juwon123,password29,false/
 관리자,admin123,pw123,true/
 박준영,qkr123,pw123,false/
+이종민,lee123,pw123,true/
+이동석,lee123,pw123,true/
 사서,librarian,pw123,true/
 *
