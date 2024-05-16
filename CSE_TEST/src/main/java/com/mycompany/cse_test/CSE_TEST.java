@@ -11,7 +11,6 @@ package com.mycompany.cse_test;
 public class CSE_TEST {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("test");
+        
     }
 }
