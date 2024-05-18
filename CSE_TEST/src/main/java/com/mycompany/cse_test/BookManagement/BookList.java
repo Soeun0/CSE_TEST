@@ -67,14 +67,8 @@ public class BookList implements Subject {
         
         try (BufferedReader br = new BufferedReader(new FileReader(projectPath))) {
            String line;
-           int lineNumber = 0;
 
             while ((line = br.readLine()) != null) {
-                if (lineNumber == 0) { // 첫 번째 행은 열 이름
-                    lineNumber++;
-                    continue;
-                }
-
                 String[] data = line.split("\t");
 
                 String title = data[0];
@@ -84,8 +78,6 @@ public class BookList implements Subject {
 
                 Book book = new Book(title, author, publisher, isbn);
                 books.add(book);
-                
-                lineNumber++;
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -26,23 +26,23 @@ public class AddRemoveUI {
 
         while (true) {
             String line = "";
-            System.out.println("1. 책 추가하기\n2. 책 삭제하기\n 3. 이전으로");
+            System.out.println("1. 책 추가하기\n2. 책 삭제하기\n3. 이전으로");
             System.out.print("▶ 번호를 입력하시오: ");
 
             try {
                 line = br.readLine();
                 if (line.isEmpty()) {
-                    System.out.println("입력이 없습니다. 다시 시도해주세요.");
+                    System.out.println("입력이 없습니다. 다시 시도해주세요.1");
                     continue;
                 }
 
                 switch (line) {
                     case "1":
                         add(booklist);
-                        break;
+                        return;
                     case "2":
                         remove(booklist);
-                        break;
+                        return;
                     case "3":
                         return;
                     default:
@@ -50,7 +50,7 @@ public class AddRemoveUI {
                         break;
                 }
             } catch (NoSuchElementException | IOException e) {
-                System.out.println("입력이 없습니다. 다시 시도해주세요.");
+                System.out.println("입력이 없습니다. 다시 시도해주세요.2");
             }
         }
     }
